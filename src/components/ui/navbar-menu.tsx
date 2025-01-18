@@ -34,7 +34,7 @@ export const MenuItem = ({
       <motion.p
         transition={{ duration: 0.3 }}
         className={clsx(
-            "cursor-pointer px-2 w-max mx-1 text-black hover:border-b hover:opacity-[0.9] dark:text-white",
+            "cursor-pointer px-2 max-w-2xl mx-1 text-black hover:opacity-[0.8] dark:text-white",
         )}
         onClick={() => href ? router.push(href) : {}}
       >
@@ -78,7 +78,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative w-[60rem] rounded-full border bg-background shadow-input flex justify-center px-8 py-4"
+      className="relative w-[auto] rounded-full border bg-background shadow-input flex justify-center px-8 py-4"
     >
       {children}
     </nav>
