@@ -29,7 +29,8 @@ export function getPosts(dir: string) {
       link,
       formattedDate,
       formattedTitle,
-      ...matterResult.data,
+      abstract: matterResult.data.abstract,
+      ...matterResult.data
     };
   });
 

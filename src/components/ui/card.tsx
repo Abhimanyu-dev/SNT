@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-export function Card({link, title, abstract, date}) {
+export function Card({link, title, abstract, date}: {link:string|undefined; title: string|undefined; abstract: string; date: string|undefined}) {
     const router = useRouter();
     const handleClick = () => {
         if (link) 

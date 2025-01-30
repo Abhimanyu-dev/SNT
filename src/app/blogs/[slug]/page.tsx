@@ -1,7 +1,7 @@
 import path from "path";
 import { getContent } from "@/utils/md";
 
-export default async function BlogPostPage({ params }) {
+export default async function BlogPostPage({ params } : { params: {slug: string}}) {
   const fullPath = path.join(
     process.cwd(),
     "src",
