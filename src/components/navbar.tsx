@@ -12,22 +12,8 @@ export function Navbar({ className }: { className?: string }) {
         className
       )}
     >
-      <Menu setActive={() => {}}>
-        <MenuItem
-          setActive={() => {}}
-          active={null}
-          item="BCS IITK"
-          href="/"
-        />
-      </Menu>
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Home" href="/" />
-        <MenuItem
-          setActive={setActive}
-          active={active}
-          item="Projects"
-          href="/projects"
-        />
         <MenuItem
           setActive={setActive}
           active={active}
@@ -63,14 +49,6 @@ export function Navbar({ className }: { className?: string }) {
           active={active}
           item="Resources"
           href="/resources"
-        />
-      </Menu>
-      <Menu setActive={() => {}}>
-        <MenuItem
-          setActive={() => {}}
-          active={null}
-          item="Join our Mailing List"
-          href="/"
         />
       </Menu>
     </div>

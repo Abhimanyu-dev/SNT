@@ -28,7 +28,6 @@ export const MenuItem = ({
   href?: string;
 }) => {
     const router = useRouter();
-    console.log(href)
   return (
     <div onMouseEnter={() => setActive(item)} className="relative ">
       <motion.p
