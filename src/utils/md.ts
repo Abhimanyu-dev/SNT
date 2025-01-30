@@ -1,12 +1,9 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
-import remarkHtml from "remark-html";
-import rehypeParse from "rehype-parse";
 import { remark } from "remark";
 
 export function getPosts(dir: string) {
