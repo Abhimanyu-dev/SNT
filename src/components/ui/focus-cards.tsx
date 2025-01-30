@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
+import { Member } from "@/app/people/page";
 
 export const Card = React.memo(
   ({
@@ -58,12 +59,12 @@ type Card = {
   about: string;
 };
 
-export function FocusCards({ cards }: { cards: Card[] }) {
+export function FocusCards({ cards }: { cards: Member[] | undefined }) {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl my-10 mx-auto md:px-8 w-full">
-      {cards.map((card, index) => (
+      {cards?.map((card, index) => (
         <Card
           key={card.firstname}
           card={card}
