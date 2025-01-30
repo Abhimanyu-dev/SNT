@@ -11,8 +11,9 @@ export default function Blogs() {
         Blogs <br />
       </h1>
       <div className="flex flex-row flex-wrap items-center justify-evenly m-5">
-        {blogs.map((blog) => (
+        {blogs.map(( blog, index) => (
           <Card
+                key={index}
                 title={blog?.formattedTitle}
                 abstract={blog?.abstract}
                 date={blog?.formattedDate} link={`/blogs/${blog?.link}`}          />
