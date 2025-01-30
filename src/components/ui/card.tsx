@@ -10,7 +10,7 @@ export function Card({link, title, abstract, date}) {
             router.push(link)
     }
   return (
-    <div className="max-w-xs w-full group/card m-5" onClick={handleClick}>
+    <div className="max-w-xs w-full group/card m-5" onClick={handleClick} key={title}>
       <div
         className={cn(
           " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col justify-between p-4",
