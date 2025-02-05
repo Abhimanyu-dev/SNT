@@ -20,7 +20,7 @@ export const Card = React.memo(
       onMouseEnter={() => setHovered(index)}
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out",
+        "rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out cursor-pointer",
         hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
       )}
     >
@@ -30,6 +30,19 @@ export const Card = React.memo(
         fill
         className="object-cover absolute inset-0"
       />
+      <div
+        className={cn(
+          "absolute inset-0 flex flex-col items-start justify-end py-8 px-4 transition-opacity duration-300",
+          hovered === index ? "opacity-0" : "opacity-100"
+        )}
+      >
+        <div className="text-xl md:text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200">
+          {card.firstname} {card.lastname}
+        </div>
+        <div className="text-lg md:text-xl font-small bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200">
+          {card.post}
+        </div>
+      </div>
       <div
         className={cn(
           "absolute inset-0 bg-black/50 flex flex-col items-start justify-end py-8 px-4 transition-opacity duration-300",
@@ -49,15 +62,6 @@ export const Card = React.memo(
 
 Card.displayName = "Card";
 
-type Card = {
-  firstname: string;
-  lastname: string;
-  post: string;
-  img: string;
-  fb: string;
-  mail: string;
-  about: string;
-};
 
 export function FocusCards({ cards }: { cards: Member[] | undefined }) {
   const [hovered, setHovered] = useState<number | null>(null);

@@ -1,4 +1,5 @@
 import { AboutUs } from "@/components/about";
+import { Activities } from "@/components/activities";
 import { Heading } from "@/components/heading";
 import { Spotlight } from "@/components/spotlight";
 import { ModeToggle } from "@/components/theme-toggle";
@@ -10,6 +11,7 @@ export default function Home() {
    <div className="mx-auto rounded-md h-auto overflow-hidden ">
     <Heading />
     <AboutUs />
+    <Activities />
    </div>
   );
 }

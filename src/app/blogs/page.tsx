@@ -10,7 +10,7 @@ export default function Blogs() {
       <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
         Blogs <br />
       </h1>
-      <div className="flex flex-row flex-wrap items-center justify-evenly m-5">
+      <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 mx-auto m-5">
         {blogs.map(( blog, index) => (
           <Card
                 key={index}

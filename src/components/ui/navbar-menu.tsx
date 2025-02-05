@@ -5,7 +5,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { useRouter } from "next/navigation";
 
-const transition = {
+export const transition = {
   type: "spring",
   mass: 0.5,
   damping: 11.5,

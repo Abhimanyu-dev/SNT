@@ -2,12 +2,13 @@ import { FocusCards } from "@/components/ui/focus-cards";
 import fs from "fs";
 import yaml from "js-yaml";
 import path from "path";
+import { ExpandableCard } from "@/components/ui/expandable-card";
 
 export default async function People() {
     const data = await getData()
-    const cordies = data?.filter((e: {post: string}) => e.post === "Coordinator")
-    const secies = data?.filter((e: {post: string}) => e.post === "Secretary")
-    const excordies = data?.filter((e: {post: string}) => e.post === "Ex-Coordinator")
+    const cordies = data?.filter((e: {post: string}) => e.post === "Coordinator").sort((a, b) => a.firstname.localeCompare(b.firstname))
+    const secies = data?.filter((e: {post: string}) => e.post === "Secretary").sort((a, b) => a.firstname.localeCompare(b.firstname))
+    const excordies = data?.filter((e: {post: string}) => e.post === "Ex-Coordinator").sort((a, b) => a.firstname.localeCompare(b.firstname))
   return (
     <div className="w-full rounded-md flex flex-col md:items-center md:justify-start bg-black/[0.96] antialiased bg-grid-small-white/[0.02] pt-20 relative overflow-hidden">
       <h1 className="text-2xl md:text-3xl font-semibold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">

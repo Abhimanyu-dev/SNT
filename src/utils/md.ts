@@ -46,5 +46,5 @@ export async function getContent(file: string) {
 
   const contentHTML = processedContent.toString();
 
-  return contentHTML;
+  return {contentHTML, title: matterResult.data.title};
 }
