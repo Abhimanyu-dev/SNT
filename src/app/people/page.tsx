@@ -2,7 +2,6 @@ import { FocusCards } from "@/components/ui/focus-cards";
 import fs from "fs";
 import yaml from "js-yaml";
 import path from "path";
-import { ExpandableCard } from "@/components/ui/expandable-card";
 
 export default async function People() {
     const data = await getData()
