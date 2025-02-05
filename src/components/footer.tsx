@@ -6,12 +6,6 @@ export const Footer = () => {
 
     return (
         <footer className="text-gray-500 px-4 py-5 max-w-screen-xl mx-auto md:px-8 border-t flex flex-col items-center justify-center">
-            <div className="max-w-lg sm:mx-auto sm:text-center">
-                <Image src="/images/logo.jpg" className=" mx-auto rounded-full" width={60} height={60} alt="BCS-LOGO"/>
-                <p className="leading-relaxed mt-2 text-[15px] text-center">
-                    Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </p>
-            </div>
             <div className="mt-8 items-center justify-between flex flex-col gap-2">
                 <div className="mt-4 sm:mt-0">
                     &copy; BCS IITK All rights reserved.

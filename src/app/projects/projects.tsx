@@ -17,12 +17,26 @@ export default function Collapsible({ projects }: { projects: any }) {
   return (
     <div>
       <div>
-        <h1
-          className="text-2xl md:text-3xl font-bold cursor-pointer m-2 mt-3"
+        <button
+          className="text-2xl md:text-3xl font-bold cursor-pointer m-2 mt-3 flex items-center"
           onClick={() => setCompleted(!completed)}
         >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={4}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
           Completed Projects
-        </h1>
+        </button>
         <motion.div
           initial={false}
           animate={{ height: completed ? "auto" : 0 }}
@@ -51,12 +65,26 @@ export default function Collapsible({ projects }: { projects: any }) {
         </motion.div>
       </div>
       <div>
-        <h1
-          className="text-2xl md:text-3xl font-bold cursor-pointer m-2 mt-3"
+        <button
+          className="text-2xl md:text-3xl font-bold cursor-pointer m-2 mt-3 flex items-center"
           onClick={() => setOngoing(!ongoing)}
         >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={4}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
           Ongoing Projects
-        </h1>
+        </button>
         <motion.div
           initial={false}
           animate={{ height: ongoing ? "auto" : 0 }}

@@ -23,7 +23,7 @@ export function Navbar({ className }: { className?: string }) {
         alt="logo"
         width={50}
         height={50}
-        className="absolute left-8 top-2 z-30 cursor-pointer"
+        className="absolute left-8 top-2 z-30 cursor-pointer rounded-full"
         onClick={() => router.push("/")}
       />
       <div className="hidden md:flex">
