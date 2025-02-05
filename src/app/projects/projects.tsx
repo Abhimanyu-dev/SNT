@@ -18,7 +18,7 @@ export default function Collapsible({ projects }: { projects: any }) {
     <div>
       <div>
         <h1
-          className="text-2xl md:text-3xl font-bold cursor-pointer"
+          className="text-2xl md:text-3xl font-bold cursor-pointer m-2 mt-3"
           onClick={() => setCompleted(!completed)}
         >
           Completed Projects
@@ -27,7 +27,7 @@ export default function Collapsible({ projects }: { projects: any }) {
           initial={false}
           animate={{ height: completed ? "auto" : 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 mx-auto m-5 overflow-hidden"
+          className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 place-items-center mx-auto m-5 overflow-hidden "
         >
           {completed_projects.map(
             (
@@ -52,7 +52,7 @@ export default function Collapsible({ projects }: { projects: any }) {
       </div>
       <div>
         <h1
-          className="text-2xl md:text-3xl font-bold cursor-pointer"
+          className="text-2xl md:text-3xl font-bold cursor-pointer m-2 mt-3"
           onClick={() => setOngoing(!ongoing)}
         >
           Ongoing Projects
@@ -61,7 +61,7 @@ export default function Collapsible({ projects }: { projects: any }) {
           initial={false}
           animate={{ height: ongoing ? "auto" : 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 mx-auto m-5 overflow-hidden"
+          className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 mx-auto m-5 place-items-center overflow-hidden"
         >
           {ongoing_projects.map(
             (
