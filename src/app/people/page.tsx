@@ -17,14 +17,14 @@ export default async function People() {
         Our Coordinators <br />
       </h1>      
       <FocusCards cards={cordies}/>
-      <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-        Our Secretaries <br />
+      <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50" >
+        Our Secretaries <br />  
       </h1>      
-      <FocusCards cards={secies}/>
+      <FocusCards cards={secies} amount={0}/>
       <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
         Our Ex-Leaders <br />
       </h1>      
-      <FocusCards cards={excordies}/>
+      <FocusCards cards={excordies} amount={0.05}/>
     </div>
   );
 }

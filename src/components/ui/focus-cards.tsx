@@ -273,7 +273,11 @@ export const Card = React.memo(
     const { setOpen, setDetails } = useModal();
     const imageVariants = {
       hidden: { opacity: 0, y: 50 },
-      show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+      show: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.6, ease: "easeOut" },
+      },
     };
     return (
       <motion.div
@@ -332,8 +336,15 @@ export const Card = React.memo(
 
 Card.displayName = "Card";
 
-export function FocusCards({ cards }: { cards: Member[] | undefined }) {
+export function FocusCards({ cards, amount }: { cards: Member[] | undefined; amount?: number }) {
   const [hovered, setHovered] = useState<number | null>(null);
+  const [triggerAmount, setTriggerAmount] = useState(amount || 0.2);
+
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setTriggerAmount(0.05); 
+    }
+  }, [amount]);
   const containerVariants = {
     hidden: { opacity: 0 },
     show: {
@@ -345,24 +356,27 @@ export function FocusCards({ cards }: { cards: Member[] | undefined }) {
   };
 
   return (
-    <motion.div 
-    variants={containerVariants}
-    initial="hidden"
-    whileInView="show"
-    viewport={{once: true, amount: 0.2}}
-    className="flex flex-wrap items-center justify-center gap-10 max-w-5xl my-10 mx-auto md:px-8 w-full">
-      <Modal>
-        {cards?.map((card, index) => (
-          <Card
-            key={card.firstname}
-            card={card}
-            index={index}
-            hovered={hovered}
-            setHovered={setHovered}
-          />
-        ))}
-        <ModalBody />
-      </Modal>
-    </motion.div>
+    <AnimatePresence>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: triggerAmount }}
+        className="flex flex-wrap items-center justify-center gap-10 max-w-5xl my-10 mx-auto md:px-8 w-full"
+      >
+        <Modal>
+          {cards?.map((card, index) => (
+            <Card
+              key={card.firstname}
+              card={card}
+              index={index}
+              hovered={hovered}
+              setHovered={setHovered}
+            />
+          ))}
+          <ModalBody />
+        </Modal>
+      </motion.div>
+    </AnimatePresence>
   );
 }
