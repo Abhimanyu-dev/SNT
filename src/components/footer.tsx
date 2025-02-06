@@ -67,8 +67,6 @@ export const Footer = () => {
               </Link>
             </li>
 
-            {/* Additional Icons */}
-
             {/* Mail */}
             <li className="w-10 h-10 border rounded-full flex items-center justify-center">
               <Link href="mailto:bcs.iitk@gmail.com" target="_blank">

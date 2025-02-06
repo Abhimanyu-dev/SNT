@@ -8,9 +8,9 @@ import { Footer } from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  icons: "/images/logo.jpg",
+  icons: "/images/logo.ico",
   title: "BCS IITK",
-  description: "SNT IITK",
+  description: "BCS IITK",
 };
 
 export default function RootLayout({
