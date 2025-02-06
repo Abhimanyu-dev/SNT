@@ -9,7 +9,7 @@ export default async function People() {
     const secies = data?.filter((e: {post: string}) => e.post === "Secretary").sort((a, b) => a.firstname.localeCompare(b.firstname))
     const excordies = data?.filter((e: {post: string}) => e.post === "Ex-Coordinator").sort((a, b) => a.firstname.localeCompare(b.firstname))
   return (
-    <div className="w-full rounded-md flex flex-col md:items-center md:justify-start bg-black/[0.96] antialiased bg-grid-small-white/[0.02] pt-20 relative overflow-hidden">
+    <div className="w-full rounded-md flex flex-col md:items-center md:justify-start bg-black/[0.96] antialiased bg-grid-small-white/[0.1] pt-20 relative overflow-hidden">
       <h1 className="text-2xl md:text-3xl font-semibold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
         Meet the Team <br />
       </h1>
