@@ -11,22 +11,22 @@ export default function Gallery() {
       </h1>
       <div className="flex flex-col w-full max-w-7xl mx-auto p-5">
         <h1 className="text-3xl md:text-4xl font-bold">SNT Pavilion</h1>
-        <div className="flex flex-row flex-wrap items-center justify-center m-5">
-          {gallery.PAV.map((image, index) => <Image key={index} src={image} alt="image" height={1200} width={1600} className="h-96 w-full md:w-[30rem] rounded-lg m-4 cursor-pointer hover:-translate-y-2 transition-transform"/>
+        <div className="flex flex-row flex-wrap items-center justify-start m-5">
+          {gallery.PAV.map((image, index) => <Image key={index} src={image} alt="image" height={1200} width={1600} className="h-72 w-full md:w-[20rem] rounded-lg m-4 cursor-pointer hover:-translate-y-2 transition-transform"/>
         )}
         </div>
       </div>
       <div className="flex flex-col w-full max-w-7xl mx-auto p-5">
         <h1 className="text-3xl md:text-4xl font-bold">Sessions</h1>
-        <div className="flex flex-row flex-wrap items-center justify-center m-5">
-          {gallery.SES.map((image, index) => <Image key={index} src={image} alt="image" height={1200} width={1600} className="h-96 w-full md:w-[30rem] rounded-lg m-4 cursor-pointer hover:-translate-y-2 transition-transform"/>
+        <div className="flex flex-row flex-wrap items-center justify-start m-5">
+          {gallery.SES.map((image, index) => <Image key={index} src={image} alt="image" height={1200} width={1600} className="h-72 w-full md:w-[20rem] rounded-lg m-4 cursor-pointer hover:-translate-y-2 transition-transform"/>
         )}
         </div>
       </div>
       <div className="flex flex-col w-full max-w-7xl mx-auto p-5">
         <h1 className="text-3xl md:text-4xl font-bold">Ask And Retrieve</h1>
-        <div className="flex flex-row flex-wrap items-center justify-center m-5">
-          {gallery.AR.map((image, index) => <Image key={index} src={image} alt="image" height={1200} width={1600} className="h-96 w-full md:w-[30rem] rounded-lg m-4 cursor-pointer hover:-translate-y-2 transition-transform"/>
+        <div className="flex flex-row flex-wrap items-center justify-start m-5">
+          {gallery.AR.map((image, index) => <Image key={index} src={image} alt="image" height={1200} width={1600} className="h-72 w-full md:w-[20rem] rounded-lg m-4 cursor-pointer hover:-translate-y-2 transition-transform"/>
         )}
         </div>
       </div>

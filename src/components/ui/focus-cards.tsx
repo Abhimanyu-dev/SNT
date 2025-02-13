@@ -133,7 +133,7 @@ const ModalBody = () => {
               src={
                 details.post === "Secretary" || details.post === "Coordinator"
                   ? `/images/team/current/${details.img}`
-                  : `/images/team/Ex-Leaders/${details.img}`
+                  : details.post === "Ex-Coordinator" ? `/images/team/Ex-Leaders/${details.img}` : `/images/team/2019-2020/${details.img}`
               }
               alt={details.firstname}
               height={1080}
@@ -289,15 +289,16 @@ export const Card = React.memo(
           setDetails(card);
         }}
         className={cn(
-          "rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-60 md: transition-all duration-300 ease-out cursor-pointer",
-          hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
+          "rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-60 transition-all duration-300 ease-out cursor-pointer",
+          hovered !== null && hovered !== index && "blur-sm scale-[0.98]",
+          card.post === "Ex-Coordinator" && "h-44 md:h-60"
         )}
       >
         <Image
           src={
             card.post === "Secretary" || card.post === "Coordinator"
               ? `/images/team/current/${card.img}`
-              : `/images/team/Ex-Leaders/${card.img}`
+              : card.post === "Ex-Coordinator" ? `/images/team/Ex-Leaders/${card.img}` : `/images/team/2019-2020/${card.img}`
           }
           alt={card.firstname}
           fill

@@ -1,12 +1,12 @@
 "use client";
 import { Card } from "@/components/ui/card";
+import clsx from "clsx";
 import { motion } from "framer-motion";
 import { Key, useState } from "react";
 
 export default function Collapsible({ projects }: { projects: any }) {
   const [ongoing, setOngoing] = useState<boolean>(true);
   const [completed, setCompleted] = useState<boolean>(true);
-  console.log(projects);
   const completed_projects = projects.filter(
     (project: { stat: string }) => project.stat === "completed"
   );
@@ -14,8 +14,42 @@ export default function Collapsible({ projects }: { projects: any }) {
     (project: { stat: string }) => project.stat === "ongoing"
   );
 
+  const handle_BYOP = () => {
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLSdqgwwzXgIFQdAMeg-v-F8b-7VgUTEeHtHhYAXn3i1E-h4Psw/viewform"
+    );
+  };
+
   return (
     <div>
+      <div className="m-5">
+        <button
+          onClick={() => setCompleted(!completed)}
+          className={clsx(
+            "border rounded-full p-2 mx-2 hover:-translate-y-1 transition-transform ",
+            completed && "bg-slate-800"
+          )}
+        >
+          Completed
+        </button>
+        <button
+          onClick={() => setOngoing(!ongoing)}
+          className={clsx(
+            "border rounded-full p-2 mx-2 hover:-translate-y-1 transition-transform ",
+            ongoing && "bg-slate-800"
+          )}
+        >
+          Ongoing
+        </button>
+        <button
+          onClick={handle_BYOP}
+          className={clsx(
+            "border rounded-full p-2 mx-2 hover:-translate-y-1 transition-transform "
+          )}
+        >
+          BYOP
+        </button>
+      </div>
       <div>
         <button
           className="text-2xl md:text-3xl font-bold cursor-pointer m-2 mt-3 flex items-center"

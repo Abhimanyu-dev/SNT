@@ -2,6 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
+import { Lora } from "next/font/google";
+
+const lora = Lora({ subsets: ['latin'] });
 
 export function AboutUs() {
   const fadeInVariants = {
@@ -16,7 +19,7 @@ export function AboutUs() {
         whileInView="visible"
         viewport={{once: true, amount: 0.2}}
         transition={{duration: 0.8, ease: "easeInOut"}}
-        className="flex flex-col items-center justify-start lg:flex-row my-8"
+        className={`flex flex-col items-center justify-start lg:flex-row my-8 ${lora.className}`}
       >
         <div className="flex flex-col items-center justify-center">
           <p className="border-b text-4xl md:text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">

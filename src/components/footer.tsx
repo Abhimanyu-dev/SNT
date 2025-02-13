@@ -120,7 +120,7 @@ export const Footer = () => {
 
             {/* YouTube */}
             <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-              <Link href="https://www.youtube.com/UC3vBBqgKjAfRZQ0di-Oy6yQ" target="_blank">
+              <Link href="https://www.youtube.com/channel/UC3vBBqgKjAfRZQ0di-Oy6yQ" target="_blank">
                 <svg
                   className="w-6 h-6 hover:text-red-500 duration-150"
                   xmlns="http://www.w3.org/2000/svg"
