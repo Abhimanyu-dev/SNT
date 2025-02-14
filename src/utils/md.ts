@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
+import gfm from "remark-gfm";
 import { remark } from "remark";
 
 export function getPosts(dir: string) {
@@ -27,7 +28,7 @@ export function getPosts(dir: string) {
       formattedDate,
       formattedTitle,
       abstract: matterResult.data.abstract,
-      ...matterResult.data
+      ...matterResult.data,
     };
   });
 
@@ -39,6 +40,7 @@ export async function getContent(file: string) {
   const matterResult = matter(fileContents);
 
   const processedContent = await remark()
+    .use(gfm)
     .use(remarkParse)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeStringify, { allowDangerousHtml: true })
@@ -46,5 +48,5 @@ export async function getContent(file: string) {
 
   const contentHTML = processedContent.toString();
 
-  return {contentHTML, title: matterResult.data.title};
+  return { contentHTML, title: matterResult.data.title };
 }

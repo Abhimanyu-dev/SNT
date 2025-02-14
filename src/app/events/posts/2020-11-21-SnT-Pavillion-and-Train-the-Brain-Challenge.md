@@ -17,14 +17,14 @@ You can check those projects again on our website!
 <div class="row">
   <center>
   <div class="column">
-    <img src="{{ site.url }}{{ site.baseurl }}/events/img/SnT_pavillion_20/poster.png" alt="Snow" style="width:100%">
+    <img src="/event_images/SnT_pavillion_20/poster.png" alt="Snow" style="width:100%">
   </div>
   <div class="column">
-    <img src="{{ site.url }}{{ site.baseurl }}/events/img/SnT_pavillion_20/y20_train_the_brain.jpg" alt="Snow" style="width:100%">
+    <img src="/event_images/SnT_pavillion_20/y20_train_the_brain.jpg" alt="Snow" style="width:100%">
   </div>
   </center>
 </div>
 
 The results of “Train Your Brain” are out, Congratulations to Prashant Mishra, Prakhar Pratap Mall and Ritam Pal  on coming up with such innovative names and winning the competition.
 Tell us about your experience with BCS so far and what ideas and activities you wish to explore with us in the future using this form: [Form](https://docs.google.com/forms/d/e/1FAIpQLSebNsQBiWfBPZRsSNx6Ko7JzvmLVEimCCBTdJjORmrKjgpXQg/viewform)
-<!--<center><img src="{{ site.url }}{{ site.baseurl }}/events/img/SnT_pavillion_20/poster.png"><img src="{{ site.url }}{{ site.baseurl }}/events/img/SnT_pavillion_20/y20_train_the_brain.jpg"></center>-->
+<!--<center><img src="/event_images/SnT_pavillion_20/poster.png"><img src="/event_images/SnT_pavillion_20/y20_train_the_brain.jpg"></center>-->

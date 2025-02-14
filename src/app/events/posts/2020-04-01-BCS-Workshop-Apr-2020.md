@@ -23,4 +23,4 @@ Shobhit Jagga - Volunteered (Logistic) <br>
 
 ### Feedbacks
 <br>
-<center><img src="{{ site.url }}{{ site.baseurl }}/events/img/BCS_Workshop_20/1.jpg"></center>
+<center><img src="/event_images/BCS_Workshop_20/1.jpg"></center>
